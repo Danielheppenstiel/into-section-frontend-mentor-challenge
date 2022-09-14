@@ -1,0 +1,363 @@
+/* FONT FAMILY */
+
+/* font-family: 'Epilogue', sans-serif; Weights: 500, 700 */
+
+/* RESET STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+    --main-ff: 'Epilouge', sans-serif;
+    --clr-white: hsl(0, 0%, 98%);
+    --clr-med-gray: hsl(0, 0%, 41%);
+    --clr-blk: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: var(--main-ff);
+    background-color: var(--clr-white);
+}
+
+/* NAV */
+
+nav {
+    background-color: var(--clr-white);
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.75fr 0.75fr 0.75fr 0.75fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'logo features company careers about blank hamburger access';
+}
+
+div.nav-logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+
+div.dropdown-features {
+    grid-area: features;
+    justify-self: center;
+    align-self: center;
+}
+
+.feature-btn {
+    color: var(--clr-med-gray);
+    border: none;
+    background-color: var(--clr-white);
+    cursor: pointer;
+}
+
+.feature-btn:hover {
+    color: var(--clr-blk);
+}
+
+
+div.feature-items {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0.1em 0.1em 0.2em);
+}
+
+.feature-ul a {
+    text-decoration: none;
+}
+
+.feature-ul img {
+    margin-right: 15px;
+}
+
+.feature-ul li {
+    list-style: none;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+
+div.dropdown-company {
+    grid-area: company;
+    justify-self: center;
+    align-self: center;
+}
+
+.company-btn {
+    color: var(--clr-med-gray);
+    border: none;
+    background-color: var(--clr-white);
+    cursor: pointer;
+}
+
+.company-btn:hover {
+    color: var(--clr-blk);
+}
+
+div.company-items {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(0.1em 0.1em 0.2em);
+}
+
+.company-ul a {
+    text-decoration: none;
+}
+
+.company-ul li {
+    list-style: none;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+
+
+div.careers-nav {
+    grid-area: careers;
+    justify-self: center;
+    align-self: center;
+}
+
+div.careers-nav a {
+    color: var(--clr-med-gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+div.about-nav {
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+
+div.about-nav a {
+    color: var(--clr-med-gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.hamburger-bars {
+    display: none;
+    grid-area: hamburger;
+    justify-self: center;
+    align-self: center;
+}
+
+div.access-nav {
+    grid-area: access;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+}
+
+a.login {
+    margin-right: 10px;
+    color: var(--clr-med-gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    align-self: center;
+}
+
+.register-btn {
+    margin-left: 10px;
+    padding: 8px 15px;
+    color: var(--clr-med-gray);
+    border: 1.5px solid var(--clr-med-gray);
+    border-radius: 10px;
+    background-color: var(--clr-white);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        height: 150px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: 
+        'logo'
+        'hamburger'
+        'features'
+        'company'
+        'careers'
+        'about'
+        'access';
+    }
+
+    div.nav-logo {
+        grid-area: logo;
+        margin: 15px 0;
+    }
+
+    .hamburger-bars {
+        display: block;
+    }
+
+    .hamburger-bars {
+        grid-area: hamburger;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+
+    div.dropdown-features {
+        grid-area: features;
+        display: none;
+        margin: 0px 0px 10px 0px;
+    }
+
+    div.dropdown-company {
+        grid-area: company;
+        display: none;
+        margin: 0px 0px 10px 0px;
+        z-index: 1;
+    }
+
+    div.careers-nav {
+        grid-area: careers;
+        display: none;
+        margin: 0px 0px 10px 0px;
+        z-index: 1;
+    }
+
+    div.about-nav {
+        grid-area: about;
+        display: none;
+        margin: 0px 0px 10px 0px;
+        z-index: 1;
+    }
+
+    div.access-nav {
+        grid-area: access;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        z-index: 1;
+    }
+
+    a.login {
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
+/* HERO  */
+
+section.hero {
+    height: 87.3vh;
+    background-color: var(--clr-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'hero-text hero-graphics';
+}
+
+.hero-text {
+    grid-area: hero-text;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    color: var(--clr-med-gray);
+    line-height: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-btn button {
+    color: white;
+    padding: 15px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 120px;
+    cursor: pointer;
+}
+
+.compaines img {
+    margin: 10px;
+}
+
+.hero-graphics {
+    grid-area: hero-graphics;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-graphics img {
+    max-width: 100%;
+    height: 70%;
+}
+
+.hero-graphics-mobile {
+    grid-area: hero-graphics;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-graphics-mobile img {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    section.hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'graphics'
+        'hero-text';
+    }
+
+    .hero-graphics {
+        display: none;
+    }
+
+    .hero-graphics-mobile {
+        grid-area: graphics;
+    }
+
+    .hero-graphics-mobile img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .hero-text {
+        grid-area: hero-text;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .compaines img {
+        margin-bottom: 30px;
+    }
+
+}
