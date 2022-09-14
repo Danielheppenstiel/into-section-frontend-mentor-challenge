@@ -56,7 +56,6 @@ nav {
     'logo features company careers about blank hamburger access';
 }
 
-```` js
 function toggleFeatures() {
 
     const getFeatureItems = document.querySelector('.feature-items');
