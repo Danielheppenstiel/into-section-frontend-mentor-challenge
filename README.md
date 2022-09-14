@@ -45,7 +45,6 @@ Users should be able to:
 I've learned a deeper understanding of arranging content on the DOM using CSS grid and flexbox. As well, I was able to reinforce some basic JavaScript concepts and apply them in this project. I utilized online resources to (listed below) solve problems. During and after the development of this project gave me insight on strengths and also on what I need to focus on to improve.
 
 
-```css
 nav {
     background-color: var(--clr-white);
     height: 100px;
@@ -57,7 +56,6 @@ nav {
     'logo features company careers about blank hamburger access';
 }
 
-```js
 function toggleFeatures() {
 
     const getFeatureItems = document.querySelector('.feature-items');
@@ -70,6 +68,7 @@ function toggleFeatures() {
 
 }
 
+---
 
 ## Author
 
